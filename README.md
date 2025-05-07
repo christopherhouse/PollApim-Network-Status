@@ -4,6 +4,8 @@
 
 This PowerShell script monitors the network connectivity status of an Azure API Management (APIM) instance by polling the network status endpoint at regular intervals. It provides real-time feedback on connectivity to various dependent resources.
 
+This script can be useful when troubleshooting connectivity issues in VNet-injected APIM deployments, where network dependencies may be complex and difficult to diagnose. It allows you to monitor the status of dependencies and get
+details about failed resource types over time.
 ## ✨ Features
 
 - 🔍 Continuously monitors APIM network connectivity
@@ -31,13 +33,13 @@ This PowerShell script monitors the network connectivity status of an Azure API 
 ### Basic Usage
 
 ```powershell
-.\Poll-Apim-Network-Status.ps1 -SubscriptionId "c5d4a6e8-69bf-4148-be25-cb362f83c370" -ResourceGroupName "RG-SW-APIM" -ApimName "apim-sw-apim-eu2"
+.\Poll-Apim-Network-Status.ps1 -SubscriptionId "<your-subscription-id>" -ResourceGroupName "<your-resource-group>" -ApimName "<your-apim-name>"
 ```
 
 ### Custom Polling Interval (5 minutes)
 
 ```powershell
-.\Poll-Apim-Network-Status.ps1 -SubscriptionId "c5d4a6e8-69bf-4148-be25-cb362f83c370" -ResourceGroupName "RG-SW-APIM" -ApimName "apim-sw-apim-eu2" -PollIntervalMinutes 5
+.\Poll-Apim-Network-Status.ps1 -SubscriptionId "<your-subscription-id>" -ResourceGroupName "<your-resource-group>" -ApimName "<your-apim-name>" -PollIntervalMinutes 5
 ```
 
 ## 📊 Sample Output
