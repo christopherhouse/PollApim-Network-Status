@@ -31,12 +31,13 @@ while ($true) {
     }
 
     if ($allSuccess) {
-        Write-Host "✅ Success, all dependencies are availabe!"
+        Write-Host "✅ Success, all dependencies are available!"
     }
 
-    # Print next polling time
+    # Print next polling time with UTC offset
     $nextPollTime = (Get-Date).AddMinutes($PollIntervalMinutes)
-    Write-Host "Next polling interval will execute at: $nextPollTime"
+    $utcOffset = (Get-Date).ToString("zzz")
+    Write-Host "Next polling interval will execute at: $nextPollTime (UTC$utcOffset)"
 
     # Wait for the specified interval
     Start-Sleep -Seconds ($PollIntervalMinutes * 60)

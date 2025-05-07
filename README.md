@@ -49,7 +49,7 @@ every 15 minutes.
 
 When all services are online:
 ```
-✅ Success, all dependencies are availabe!
+✅ Success, all dependencies are available!
 Next polling interval will execute at: 05/07/2025 15:53:04
 ```
 
