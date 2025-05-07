@@ -6,6 +6,9 @@ This PowerShell script monitors the network connectivity status of an Azure API 
 
 This script can be useful when troubleshooting connectivity issues in VNet-injected APIM deployments, where network dependencies may be complex and difficult to diagnose. It allows you to monitor the status of dependencies and get
 details about failed resource types over time.
+
+Note that the polling interval is configured, however the connectivity status reported by this API is only updated
+every 15 minutes.
 ## ✨ Features
 
 - 🔍 Continuously monitors APIM network connectivity
