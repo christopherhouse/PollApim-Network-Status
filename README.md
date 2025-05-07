@@ -60,10 +60,19 @@ Next polling interval will execute at: 05/07/2025 15:53:04
 ## 📝 How It Works
 
 The script:
-1. 🔄 Calls the APIM network status endpoint via Azure CLI
+1. 🔄 Calls the APIM network status endpoint via Azure CLI using the `az apim show-network-status` command
+   - This command calls the APIM REST API endpoint: `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/networkstatus?api-version=2021-08-01`
+   - The endpoint returns a comprehensive list of all dependencies and their connectivity status
 2. 🔍 Parses the JSON response to analyze the connectivity status
 3. ✅ Displays success or error messages based on the connectivity status
 4. ⏱️ Waits for the specified interval before polling again
+
+The network status API provides detailed information about connectivity to various Azure service dependencies including:
+- Azure Storage accounts
+- Azure SQL databases
+- Key Vault instances
+- Event Hubs
+- Any other resources the APIM instance requires to function properly
 
 ## 🛠️ Troubleshooting
 
