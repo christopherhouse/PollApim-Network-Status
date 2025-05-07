@@ -1,8 +1,5 @@
 # 🔄 APIM Network Status Polling Tool
 
-<img src="https://img.shields.io/badge/Azure-API%20Management-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure API Management" />
-<img src="https://img.shields.io-badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell" />
-
 ## 📋 Overview
 
 This PowerShell script monitors the network connectivity status of an Azure API Management (APIM) instance by polling the network status endpoint at regular intervals. It provides real-time feedback on connectivity to various dependent resources.
