@@ -26,12 +26,12 @@ while ($true) {
     foreach ($item in $connectivityStatus) {
         if ($item.status -ne "success") {
             $allSuccess = $false
-            Write-Host "Error! Name: $($item.name), ResourceType: $($item.resourceType)" -ForegroundColor Red
+            Write-Host "❌ Error! Name: $($item.name), ResourceType: $($item.resourceType)"
         }
     }
 
     if ($allSuccess) {
-        Write-Host "Success!" -ForegroundColor Green
+        Write-Host "✅ Success, all dependencies are availabe!"
     }
 
     # Print next polling time
