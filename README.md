@@ -1,7 +1,7 @@
 # 🔄 APIM Network Status Polling Tool
 
-![Azure API Management](https://img.shields.io/badge/Azure-API%20Management-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+<img src="https://img.shields.io/badge/Azure-API%20Management-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure API Management" />
+<img src="https://img.shields.io-badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell" />
 
 ## 📋 Overview
 
