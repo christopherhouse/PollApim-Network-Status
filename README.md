@@ -49,22 +49,22 @@ every 15 minutes.
 
 When all services are online:
 ```
-✅ Success, all dependencies are available!
-Next polling interval will execute at: 05/07/2025 15:53:04
+✅ [15:53:04 (UTC-05:00)] Success, all dependencies are available!
+Next polling interval will execute at: 05/07/2025 15:53:04 (UTC-05:00)
 ```
 
 When there are connectivity issues:
 ```
-❌ Error! Name: apimstrmszxtdxh2df5ldxr8.blob.core.windows.net, ResourceType: BlobStorage
-❌ Error! Name: apirpsqlfi6mahlotrqv5mnk.database.windows.net, ResourceType: SQLDatabase
-Next polling interval will execute at: 05/07/2025 15:53:04
+❌ [15:53:04 (UTC-05:00)] Error! Name: apimstrmszxtdxh2df5ldxr8.blob.core.windows.net, ResourceType: BlobStorage
+❌ [15:53:04 (UTC-05:00)] Error! Name: apirpsqlfi6mahlotrqv5mnk.database.windows.net, ResourceType: SQLDatabase
+Next polling interval will execute at: 05/07/2025 15:53:04 (UTC-05:00)
 ```
 
 ## 📝 How It Works
 
 The script:
-1. 🔄 Calls the APIM network status endpoint via Azure CLI using the `az apim show-network-status` command
-   - This command calls the APIM REST API endpoint: `/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/networkstatus?api-version=2021-08-01`
+1. 🔄 Calls the APIM network status endpoint via Azure CLI using the `az rest` command
+   - This command sends a GET request to the APIM REST API endpoint: `https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/networkstatus?api-version=2024-05-01`
    - The endpoint returns a comprehensive list of all dependencies and their connectivity status
 2. 🔍 Parses the JSON response to analyze the connectivity status
 3. ✅ Displays success or error messages based on the connectivity status
