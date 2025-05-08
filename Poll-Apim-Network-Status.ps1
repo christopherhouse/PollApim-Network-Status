@@ -26,12 +26,12 @@ while ($true) {
     foreach ($item in $connectivityStatus) {
         if ($item.status -ne "success") {
             $allSuccess = $false
-            Write-Host "❌ Error! Name: $($item.name), ResourceType: $($item.resourceType)"
+            Write-Host "❌ [$(Get-Date -Format 'HH:mm:ss (UTCzzz)')] Error! Name: $($item.name), ResourceType: $($item.resourceType)"
         }
     }
 
     if ($allSuccess) {
-        Write-Host "✅ Success, all dependencies are available!"
+        Write-Host "✅ [$(Get-Date -Format 'HH:mm:ss (UTCzzz)')] Success, all dependencies are available!"
     }
 
     # Print next polling time with UTC offset
